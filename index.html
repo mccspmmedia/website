@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore Товары</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Товары из FakeStore API</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Категория 1</a></li>
+                <li><a href="#">Категория 2</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="products-container"></div>
+
+    <footer>
+        <p>© 2024 Ваша компания</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const productsContainer = document.getElementById("products-container");
+
+            fetch("https://fakestoreapi.com/products")
+                .then(response => response.json())
+                .then(products => {
+                    products.forEach(product => {
+                        const productElement = document.createElement("div");
+                        productElement.className = "product"; // Добавляем класс для стилей
+                        productElement.innerHTML = `
+                            <h2>${product.title}</h2>
+                            <p>${product.description}</p>
+                            <p>Цена: $${product.price}</p>
+                            <img src="${product.image}" alt="${product.title}" style="max-width: 100px;">
+                        `;
+                        productsContainer.appendChild(productElement);
+                    });
+                })
+                .catch(error => {
+                    console.error("Ошибка при загрузке товаров:", error);
+                });
+        });
+    </script>
+</body>
+</html>

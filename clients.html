@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клиенты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Страница Клиенты</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="clients.html">Клиенты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="clientsContainer"></main>
+
+    <footer>
+        <p>© 2024 Ваша компания</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const clientsContainer = document.getElementById("clientsContainer");
+
+            // Выполняем fetch-запрос к JSON-серверу
+            fetch('https://your-username.github.io/your-repository/db.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Создаем карточки клиентов
+                    data.clients.forEach(client => {
+                        const clientCard = document.createElement("div");
+                        clientCard.className = "client-card";
+                        clientCard.innerHTML = `
+                            <h2>${client.name}</h2>
+                            <p>Email: ${client.email}</p>
+                            <p>Phone: ${client.phone}</p>
+                            <p>Address: ${client.address}</p>
+                        `;
+                        clientsContainer.appendChild(clientCard);
+                    });
+                })
+                .catch(error => {
+                    console.error("Ошибка при получении данных:", error);
+                });
+        });
+    </script>
+</body>
+</html>

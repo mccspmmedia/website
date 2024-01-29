@@ -13,9 +13,8 @@
         <nav>
             <ul>
                 <li><a href="#">Главная</a></li>
-                <li><a href="#">Категория 1</a></li>
-                <li><a href="#">Категория 2</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="clients.html">Клиенты</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +34,7 @@
                 .then(products => {
                     products.forEach(product => {
                         const productElement = document.createElement("div");
-                        productElement.className = "product"; // Добавляем класс для стилей
+                        productElement.className = "product";
                         productElement.innerHTML = `
                             <h2>${product.title}</h2>
                             <p>${product.description}</p>

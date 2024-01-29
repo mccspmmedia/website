@@ -1,0 +1,61 @@
+{
+    "clients": [
+      {
+        "id": 1,
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "phone": "+1 (555) 123-4567",
+        "address": "123 Main St, Cityville"
+      },
+      {
+        "id": 2,
+        "name": "Bob Smith",
+        "email": "bob@example.com",
+        "phone": "+1 (555) 987-6543",
+        "address": "456 Oak St, Townsville"
+      },
+      {
+        "id": 3,
+        "name": "Charlie Brown",
+        "email": "charlie@example.com",
+        "phone": "+1 (555) 345-6789",
+        "address": "789 Pine St, Villagetown"
+      },
+      {
+        "id": 4,
+        "name": "Diana Miller",
+        "email": "diana@example.com",
+        "phone": "+1 (555) 876-5432",
+        "address": "101 Cedar St, Hamletville"
+      },
+      {
+        "id": 5,
+        "name": "Edward Davis",
+        "email": "edward@example.com",
+        "phone": "+1 (555) 234-5678",
+        "address": "202 Elm St, Countryside"
+      },
+      {
+        "id": 6,
+        "name": "Fiona Wilson",
+        "email": "fiona@example.com",
+        "phone": "+1 (555) 765-4321",
+        "address": "303 Birch St, Meadowtown"
+      },
+      {
+        "id": 7,
+        "name": "George Taylor",
+        "email": "george@example.com",
+        "phone": "+1 (555) 321-8765",
+        "address": "404 Maple St, Hillside"
+      },
+      {
+        "id": 8,
+        "name": "Holly Anderson",
+        "email": "holly@example.com",
+        "phone": "+1 (555) 678-9012",
+        "address": "505 Walnut St, Riverside"
+      }
+    ]
+  }
+  
